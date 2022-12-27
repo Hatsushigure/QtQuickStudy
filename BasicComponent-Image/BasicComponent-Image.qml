@@ -13,18 +13,43 @@ Window {
         Flow {
             anchors.fill: parent
 //            columns: 3
+            spacing: 4
 
             Image { //用于显示静态图片
                 id: simpleImage
-                source: "../Picture.png"
+                source: "../Picture.png"    //指定图片源
             }
 
             Image {
-                id: stretchedImage
                 source: "../Picture.png"
                 fillMode: Image.Stretch //拉伸模式（默认）
+                width: 200; height: 72
+            }
+
+            Image {
+                source: "../Picture.png"
+                fillMode: Image.PreserveAspectFit   //保留比例缩放（保留完整内容）
+                width: 200; height: 72
+            }
+
+            Image {
+                source: "../Picture.png"
+                fillMode: Image.PreserveAspectCrop  //保留比例裁切
+                width: 200; height: 72
+            }
+
+            Image {
+                source: "../Picture.png"
+                fillMode: Image.PreserveAspectCrop  //保留比例裁切
+                width: 200
+            }
+
+            Image {
+                source: "../Picture.png"
+                fillMode: Image.Tile    //材质填充
                 width: 288; height: 72
             }
+
         }
     }
 }
