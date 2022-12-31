@@ -11,8 +11,8 @@ Window {
         padding: 3  //整个定位器的外围留白, 也可在前面加上方向
         layoutDirection: "LeftToRight"  //排列方向，默认从左到右
 
-        Repeater {
-            model: 5
+        Repeater {  //Repeater，用于重复相似元素
+            model: 5    //重复次数
 
             MyRandColorRect {
                 width: 100; height: 100
