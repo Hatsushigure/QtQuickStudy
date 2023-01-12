@@ -23,7 +23,7 @@ Window {
 		id: img2
 		x: img1.x + 20 + width; y: root.height - height
 		source: "../Picture.png"
-		text: "animation on property"
+		text: "animation on behavior"
 
 		Behavior on y {	// Behavior 中的动画会随目标值的改变而触发
 			PropertyAnimation {duration: 3000}
@@ -36,7 +36,7 @@ Window {
 		id: img3
 		x: img2.x + 20 + width; y: root.height - height
 		source: "../Picture.png"
-		text: "animation on property"
+		text: "animation triggered manually"
 
 		PropertyAnimation {
 			id: anima1
@@ -47,6 +47,34 @@ Window {
 		}
 
 		onClicked: anima1.start()	//使用 start() 方法可以直接播放
+	}
+
+	ClickableImage {
+		id: img4
+		x: img3.x + 20 + width; y: root.height - height
+		source: "../Picture.png"
+		text: "animation associated with state"
+
+		states: State {
+			name: "pressed"
+			when: mouseArea2.pressed
+			PropertyChanges {
+				target: img4
+				y: 40
+			}
+		}
+
+		transitions: Transition {
+			reversible: true
+			from: ""
+			to: "pressed"
+			PropertyAnimation {duration: 3000; target: img4; property: "y"}
+		}
+
+		MouseArea {
+			id: mouseArea2
+			anchors.fill: parent
+		}
 	}
 
 	MouseArea {
