@@ -3,6 +3,7 @@ import QtQuick
 Item {
 	property alias source: image.source
 	property alias text: label.text
+	property bool showText: true
 	signal clicked
 
 	id: root
@@ -21,6 +22,7 @@ Item {
 			width: image.width
 			horizontalAlignment: Text.AlignHCenter
 			wrapMode: Text.WordWrap
+			visible: root.showText
 		}
 	}
 

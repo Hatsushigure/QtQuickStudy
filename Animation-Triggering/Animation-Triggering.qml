@@ -1,5 +1,6 @@
 //触发动画
 import QtQuick
+import "../Utils" as Utils
 
 Window {
 	id: root
@@ -7,7 +8,7 @@ Window {
 	visible: true
 	title: "Animation-Triggering"
 
-	ClickableImage {
+	Utils.ClickableImage {
 		id: img1
 		x: 40; y: root.height - height
 		source: "../Picture.png"
@@ -19,7 +20,7 @@ Window {
 		}
 	}
 
-	ClickableImage {
+	Utils.ClickableImage {
 		id: img2
 		x: img1.x + 20 + width; y: root.height - height
 		source: "../Picture.png"
@@ -32,7 +33,7 @@ Window {
 		onClicked: y = 40
 	}
 
-	ClickableImage {
+	Utils.ClickableImage {
 		id: img3
 		x: img2.x + 20 + width; y: root.height - height
 		source: "../Picture.png"
@@ -49,7 +50,7 @@ Window {
 		onClicked: anima1.start()	//使用 start() 方法可以直接播放
 	}
 
-	ClickableImage {
+	Utils.ClickableImage {
 		id: img4
 		x: img3.x + 20 + width; y: root.height - height
 		source: "../Picture.png"
