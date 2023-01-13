@@ -4,6 +4,10 @@ Item {
 	property alias source: image.source
 	property alias text: label.text
 	property bool showText: true
+	property alias imageImplicitWidth: image.implicitWidth
+	property alias imageImplicitHeight: image.implicitHeight
+	property alias imageWidth: image.width
+	property alias imageHeight: image.height
 	signal clicked
 
 	id: root
