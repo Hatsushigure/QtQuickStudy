@@ -25,6 +25,48 @@ Window {
 
 		Grid {
 			id: inGroup
+			columns: 5; rows: 2
+			anchors.top: linerImage.bottom; anchors.horizontalCenter: parent.horizontalCenter
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Quad"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Cubic"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Quart"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Quint"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Sine"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Expo"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Circ"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Elastic"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Back"
+			}
+
+			ClickableEasingType {
+				prefix: "In"; generalType: "Bounce"
+			}
 		}
 	}
 }
