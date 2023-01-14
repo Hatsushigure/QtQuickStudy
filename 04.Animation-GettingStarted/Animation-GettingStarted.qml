@@ -10,12 +10,12 @@ Window {
 		property bool running: false
 
 		id:root
-		source: "../Colorful.png"
+		source: "../images/Colorful.png"
 		anchors.fill:parent
 
 		Image {
 			id: thePic
-			source: "../Picture.png"
+			source: "../images/Picture.png"
 			x: root.padding; y: (root.height - height) / 2
 
 			//PropertyAnimation 适用于所有类型的目标值

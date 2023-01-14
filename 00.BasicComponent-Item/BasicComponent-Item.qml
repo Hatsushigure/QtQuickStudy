@@ -38,7 +38,7 @@ Window {
 
             Image {
                 x: -50; y: -30
-                source: "../Colorful.png"
+                source: "../images/Colorful.png"
             }
         }
 
@@ -49,7 +49,7 @@ Window {
 
             Image {
                 x: -50; y: -30
-                source: "../Colorful.png"
+                source: "../images/Colorful.png"
             }
         }
     }

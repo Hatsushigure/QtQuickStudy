@@ -11,7 +11,7 @@ Window {
 	Utils.ClickableImage {
 		id: img1
 		x: 40; y: root.height - height
-		source: "../Picture.png"
+		source: "../images/Picture.png"
 		text: "animation on property"
 
 		PropertyAnimation on y {	//使用 on 的动画会在元素创建完成后自动播放
@@ -23,7 +23,7 @@ Window {
 	Utils.ClickableImage {
 		id: img2
 		x: img1.x + 20 + width; y: root.height - height
-		source: "../Picture.png"
+		source: "../images/Picture.png"
 		text: "animation on behavior"
 
 		Behavior on y {	// Behavior 中的动画会随目标值的改变而触发
@@ -36,7 +36,7 @@ Window {
 	Utils.ClickableImage {
 		id: img3
 		x: img2.x + 20 + width; y: root.height - height
-		source: "../Picture.png"
+		source: "../images/Picture.png"
 		text: "animation triggered manually"
 
 		PropertyAnimation {
@@ -53,7 +53,7 @@ Window {
 	Utils.ClickableImage {
 		id: img4
 		x: img3.x + 20 + width; y: root.height - height
-		source: "../Picture.png"
+		source: "../images/Picture.png"
 		text: "animation associated with state"
 
 		states: State {

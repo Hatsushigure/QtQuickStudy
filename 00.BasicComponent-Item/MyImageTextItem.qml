@@ -12,7 +12,7 @@ Item {
         Image {
             anchors.top: parent.top; anchors.left: parent.left
             width: parent.width; height: parent.height - simpleText.height
-            source: "../Picture.png"
+            source: "../images/Picture.png"
         }
 
         Text {
