@@ -6,6 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.2 COMPONENTS Quick REQUIRED)
+ find_package(Qt6 REQUIRED COMPONENTS QuickControls2)
 
 qt_add_executable(appApplication-Desktop
     main.cpp
@@ -28,6 +29,7 @@ set_target_properties(appApplication-Desktop PROPERTIES
 
 target_link_libraries(appApplication-Desktop
     PRIVATE Qt6::Quick)
+target_link_libraries(appApplication-Desktop PRIVATE Qt6::QuickControls2)
 
 install(TARGETS appApplication-Desktop
     BUNDLE DESTINATION .
