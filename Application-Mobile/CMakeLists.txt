@@ -15,7 +15,8 @@ qt_add_executable(appApplication-Mobile
 qt_add_qml_module(appApplication-Mobile
     URI Application-Mobile
     VERSION 1.0
-    QML_FILES main.qml 
+    QML_FILES main.qml
+    RESOURCES ../images/icons/menu-144.png
 )
 
 set_target_properties(appApplication-Mobile PROPERTIES
