@@ -4,20 +4,8 @@ import QtQuick.Controls.Material as Controls
 Controls.Page {
 	title: "设置"
 
-	Controls.Button {
-		id: copyButton
-		text: "套娃"
-		anchors.horizontalCenter: parent.horizontalCenter
-		anchors.top: parent.top; anchors.topMargin: 8
-		onClicked: {
-			parent.parent.parent.push(Qt.createComponent("./SettingsPage.qml", parent.parent.parent))
-		}
-	}
-
 	Rectangle {
-		anchors.top: copyButton.bottom; anchors.topMargin: 4
-		anchors.bottom: parent.bottom
-		width: parent.width
+		anchors.fill: parent
 		clip: true
 
 		Controls.ScrollView {
