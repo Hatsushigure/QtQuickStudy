@@ -27,9 +27,10 @@ Controls.Page {
 			contentWidth: availableWidth
 
 			ListView {
-				width: parent.availableWidth
+				id: listView
+				width: parent.contentWidth
 				delegate:  Rectangle {
-					width: parent.width; height: Math.max(theText.implicitHeight, theSwitch.implicitHeight)
+					width: listView.width; height: Math.max(theText.implicitHeight, theSwitch.implicitHeight)
 
 					Text {
 						id: theText

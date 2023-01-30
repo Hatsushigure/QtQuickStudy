@@ -59,6 +59,13 @@ Controls.ApplicationWindow {
 						stackView.push(Qt.createComponent("./SettingsPage.qml", stackView))
 					}
 				}
+
+				ListElement {
+					text: "关于"
+					trigger: function() {
+						aboutDial.open()
+					}
+				}
 			}
 		}
 	}
@@ -75,5 +82,19 @@ Controls.ApplicationWindow {
 		}
 
 		App.HomePage {id: homePage}
+	}
+
+	Controls.Dialog {
+		id: aboutDial
+		anchors.centerIn: parent
+		standardButtons: Controls.Dialog.Ok
+		modal: true
+		title: "关于"
+
+		Text {
+			anchors.fill: parent
+			text: "Copyright(C) 2023 初時雨. All rights reserved."
+			wrapMode: Text.WordWrap
+		}
 	}
 }
