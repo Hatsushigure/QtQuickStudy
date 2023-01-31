@@ -30,13 +30,29 @@ Controls.Page {
 				text = clickCount
 			}
 			else {
-				text = "不会吧，不会真的有人这么闲吧\n算了，给你个小小的彩蛋\n送你一颗小星星  (o゜▽゜)o☆"
+				egg.start()
 			}
 		}
 
 		MouseArea {
 			onClicked: theText.clickCount++
 			anchors.fill: parent
+		}
+
+		PropertyAnimation {
+			id: egg
+			from: 0; to: 2
+			duration: 200
+			target: swipeView
+			property: "currentIndex"
+			onFinished: timer1.start()
+		}
+		Timer {
+			id: timer1
+			interval: 100
+			onRunningChanged: {
+				if (!running) egg.start()
+			}
 		}
 	}
 }
