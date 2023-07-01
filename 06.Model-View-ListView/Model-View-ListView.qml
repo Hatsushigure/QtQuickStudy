@@ -57,7 +57,6 @@ Window {
 			Rectangle {	//此组件位于 delegate 下一层
 			id: highlighter
 			width: list1.width - list1.leftMargin - list1.rightMargin; height: 50
-			y: parent.currentItem.y
 			color: "#0ef116"
 			border.color: Qt.lighter(color)
 			radius: 8
