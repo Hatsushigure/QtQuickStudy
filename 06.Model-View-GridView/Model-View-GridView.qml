@@ -14,6 +14,7 @@ Window {
 		//		flow: GridView.FlowTopToBottom	//指定排列方向是追平还是竖直
 		model: 100
 		delegate: Item {	//元素在单元格内左上对齐, 故再套一层 Item
+			id: deleg
 			width: view.cellWidth; height: view.cellHeight
 			Rectangle {
 				anchors.centerIn: parent
